@@ -1,0 +1,71 @@
+body {
+  background-color: blanchedalmond;
+}
+:root {
+  --font-sizeMain: 42px;
+  --font-size: 18px;
+  --font-weight: 600;
+  --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Horizontally centers the div */
+  align-items: center; /* Vertically centers the div */
+  height: 100vh;
+}
+.weather {
+  width: 400px;
+  background-color: rgb(74, 213, 167);
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0px 2px 13px 2px black;
+}
+
+.weather__city,
+.weather__temp {
+  font-size: var(--font-sizeMain);
+  font-weight: var(--font-weight);
+  font-family: var(--font-family);
+}
+
+.weather__status,
+.weather__feels-like {
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+}
+.weather__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#suggestions {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ccc;
+  max-width: 300px;
+}
+
+#suggestions li {
+  padding: 8px 38px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  font-family: var(--font-family);
+}
+
+#suggestions li:hover {
+  background-color: #e0e0e0;
+}
+
+#inputField{
+  padding: 18px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+#inputField::placeholder{
+  font-size: 18px;
+  font-family: var(--font-family);
+}
