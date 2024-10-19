@@ -12,7 +12,7 @@ const getCity = () => {
 const getCities = async (query) => {
   suggestions.innerHTML = "";
   const data = await fetch(
-    `http://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=5&appid=${API_KEY}`
+    `https://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=5&appid=${API_KEY}`
   );
   const result = await data.json();
 
@@ -56,7 +56,7 @@ const getWeather = (data) => {
   const feelsLike = Math.round(data.main.feels_like);
   const weatherStatus = data.weather[0].main;
   const iconCode = data.weather[0].icon;
-  const iconUrl = `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
+  const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
 
   const template = `
         <div class="weather__header">
