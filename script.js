@@ -1,5 +1,7 @@
+import { key } from './api.js';
+
 const weatherBlock = document.querySelector("#weather");
-const API_KEY = "8a3f51cc7dfc752b212e056de7d68aee";
+const API_KEY = key;
 const suggestions = document.getElementById("suggestions");
 
 const getCity = () => {
